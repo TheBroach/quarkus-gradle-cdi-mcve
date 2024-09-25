@@ -12,3 +12,7 @@ dependencies {
     implementation(libs.kotlin.allopen.plugin)
     implementation(libs.quarkus.jandex)
 }
+
+tasks.compileTestKotlin {
+    dependsOn(tasks.compileKotlin)
+}

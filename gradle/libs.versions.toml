@@ -4,15 +4,21 @@ quarkus = "3.14.2"
 jandex = "2.0.0"
 kotlin-logging = "7.0.0"
 jakarta-cdi = "4.1.0"
+protobuf-gradle = "0.9.4"
 
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 kotlin-allopen-plugin = { module = "org.jetbrains.kotlin:kotlin-allopen", version.ref = "kotlin"  }
 kotlin-logging = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "kotlin-logging" }
-quarkus-plugin = { module = "io.quarkus:gradle-application-plugin", version.ref = "quarkus" }
 quarkus-platform = { module = "io.quarkus.platform:quarkus-bom", version.ref = "quarkus" }
 quarkus-arc = { module = "io.quarkus:quarkus-arc" }
 quarkus-kotlin-extension = { module = "io.quarkus:quarkus-kotlin" }
 quarkus-kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8" }
 quarkus-jandex = { module = "org.kordamp.gradle:jandex-gradle-plugin", version.ref = "jandex" }
+quarkus-grpc = { module = "io.quarkus:quarkus-grpc" }
 jakarta-cdi = { module = "jakarta.enterprise:jakarta.enterprise.cdi-api", version.ref = "jakarta-cdi" }
+
+[plugins]
+quarkus-gradle = { id = "io.quarkus", version.ref = "quarkus" }
+google-protobuf = { id = "com.google.protobuf", version.ref = "protobuf-gradle" }
+
