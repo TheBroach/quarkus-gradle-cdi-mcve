@@ -18,6 +18,10 @@ tasks.quarkusDependenciesBuild {
     dependsOn(tasks.jandex)
 }
 
+tasks.compileKotlin {
+    dependsOn(tasks.`compileQuarkus-test-generated-sourcesKotlin`)
+}
+
 // Required if running tests with QuarkusTest annotation.
 // https://quarkus.io/guides/logging#configure-logging-for-quarkustest
 tasks.withType<Test> {

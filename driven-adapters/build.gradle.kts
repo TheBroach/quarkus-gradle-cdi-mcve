@@ -1,6 +1,5 @@
 plugins {
     id("kotlin-conventions")
-    alias(libs.plugins.google.protobuf)
 }
 
 dependencies {
